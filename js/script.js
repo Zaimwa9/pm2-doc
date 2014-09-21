@@ -15,6 +15,7 @@
                 $("[href='#"+cid+"']").addClass('active');
             }
         });
+        $('a.level-1').eq(0).addClass('active-section');
     });
 
     /*
@@ -151,6 +152,24 @@
                     current ? current.el : null);
                 current = latest;
             }
+
+
+            $('.level-2').hide();
+            $('.level-3').hide();
+            var active = $('ul.level-2, ul.level-3').has('a.active');
+            if (!active.length) {
+              var first = $('li.level-1').eq(0);
+              first.find('a.level-1').addClass('active-section');
+              first.find('.level-2, .level-3').show();
+            }
+            active.show();
+            active.find('.level-2, .level-3').show();
+
+            $('.active-section').removeClass('active-section');
+            var activeSection = $('li.level-1').has('a.active');
+            activeSection.children('a').addClass('active-section');
+            var noop;
+
         });
 
         $(window).trigger('resize');

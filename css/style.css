@@ -140,6 +140,7 @@ a ul {
 }
 .content blockquote {
   margin: 0;
+  background: #2b3a42;
 }
 .content blockquote :first-child {
   padding-top: 0;
@@ -191,6 +192,9 @@ a ul {
   min-height: 100%;
   position: relative;
 }
+.content-root img {
+  max-width: 100%;
+}
 .content-root h1 {
   background-color: #fcfcfc;
   font-size: 34px;
@@ -203,7 +207,7 @@ a ul {
 }
 .content {
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 240px;
   padding-left: 40px;
   padding-right: 40px;
   max-width: 700px;
@@ -232,13 +236,13 @@ a ul {
   padding-top: 10px;
 }
 .content h1 {
-  background-color: #fcfcfc;
-  font-size: 34px;
+  border-bottom: 1px solid #e9e9e9;
+  border-top: 1px solid #e9e9e9;
+  background: #fcfcfc;
+  font-size: 19px;
   color: #098bcc;
   font-weight: 200;
   margin-top: 0px;
-  background: none;
-  border: none;
   top: 26px;
 }
 .content h3 {
@@ -246,21 +250,19 @@ a ul {
 }
 .content h1,
 .content h2,
-.content .big-heading,
-body.big-h3 .content h3 {
-  padding-top: 40px;
+.content .big-heading {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 @media (max-width: 768px) {
   .content h1,
   .content h2,
-  .content .big-heading,
-body.big-h3 .content h3 {
+  .content .big-heading {
     padding-top: 40px;
   }
   .content h1:before,
   .content h2:before,
-  .content .big-heading:before,
-body.big-h3 .content h3:before {
+  .content .big-heading:before {
     background: #dfe2e7;
     left: -40px;
     top: -20px;
@@ -279,13 +281,22 @@ body:not(.big-h3) .content h3 {
 body:not(.big-h3) .content h3 {
   font-size: 0.9em;
 }
+body.big-h3 .content h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #fff;
+}
 .content h1:first-child {
-  padding-top: 0;
+  padding-top: 10px;
+  font-size: 34px;
+  color: #098bcc;
+  border: none;
+  background: #fff;
 }
 .content h1:first-child,
 .content h1:first-child a,
 .content h1:first-child a:visited {
-  color: #505050;
+  color: #098bcc;
 }
 .content h1:first-child:before {
   display: none;
@@ -435,10 +446,9 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   body:not(.no-literate) .content > h2,
   body:not(.no-literate) .content > h3 {
     clear: both;
-    width: 58%;
+    max-width: 580px;
   }
-  body:not(.no-literate) .content > pre,
-  body:not(.no-literate) .content > blockquote {
+  body:not(.no-literate) .content > pre {
     width: 480px;
     padding-left: 20px;
     padding-right: 20px;
@@ -446,18 +456,20 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
     clear: right;
   }
   body:not(.no-literate) .content > pre + p,
-  body:not(.no-literate) .content > blockquote + p,
   body:not(.no-literate) .content > pre + ul,
-  body:not(.no-literate) .content > blockquote + ul,
   body:not(.no-literate) .content > pre + ol,
-  body:not(.no-literate) .content > blockquote + ol,
   body:not(.no-literate) .content > pre + h4,
-  body:not(.no-literate) .content > blockquote + h4,
   body:not(.no-literate) .content > pre + h5,
-  body:not(.no-literate) .content > blockquote + h5,
-  body:not(.no-literate) .content > pre + h6,
-  body:not(.no-literate) .content > blockquote + h6 {
+  body:not(.no-literate) .content > pre + h6 {
     clear: both;
+  }
+  body:not(.no-literate) .content > blockquote {
+    width: 440px;
+    margin-right: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    float: right;
+    clear: right;
   }
   body:not(.no-literate) .content > p,
   body:not(.no-literate) .content > ul,
@@ -493,7 +505,6 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 }
 .header {
   background: #21292e;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
   height: 58px;
   line-height: 20px;
   position: relative;
@@ -545,6 +556,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   color: #919191;
   display: block;
   height: 58px;
+  transition: all 0.4s ease;
 }
 .header li a:hover {
   color: #f3f3f3;
@@ -584,12 +596,13 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
   background-image: url("https://developers.digitalocean.com/assets/images/noise.jpg");
 }
 .menubar .section {
-  padding: 30px 30px;
+  width: 200px;
   box-sizing: border-box;
 }
 .menubar .section ul {
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 .section + .section {
   border-top: solid 1px #dfe2e7;
@@ -670,16 +683,18 @@ a.big.button:hover:visited {
 .menubar {
   font-size: 0.9em;
 }
-.menu ul.level-1 > li + li {
-  margin-top: 20px;
+.menu ul.level-1 {
+  box-sizing: border-box;
 }
 .menu a {
   box-sizing: border-box;
   position: relative;
+  width: 200px;
   display: block;
   padding-top: 1px;
   padding-bottom: 1px;
   margin-right: -30px;
+  font-size: 13px;
 }
 .menu a,
 .menu a:visited {
@@ -688,26 +703,56 @@ a.big.button:hover:visited {
 .menu a:hover {
   color: #4d4d4d;
 }
+.menu a:hover:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  margin-top: -1px;
+  height: 2px;
+  background: #ccc;
+  width: 6px;
+  border-radius: 2px;
+}
+.menu a:hover:after {
+  content: "";
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  height: 4px;
+  width: 4px;
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  margin-top: -4px;
+}
 .menu a.level-1 {
-  font-family: montserrat, sans-serif;
-  text-transform: uppercase;
-  font-size: 0.9em;
-  font-weight: bold;
+  color: #4d4d4d;
+  border-top: 1px solid #e0e0e0;
+  padding: 8px 12px 8px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
 }
 .menu a.level-1,
 .menu a.level-1:visited {
   color: #919191;
 }
 .menu a.level-1:hover {
-  color: #575757;
+  background: rgba(76,95,102,0.1);
+}
+.menu a.level-1.active-section {
+  background: rgba(76,95,102,0.1);
+  font-weight: bold;
 }
 .menu a.level-2 {
   font-weight: normal;
+  padding-left: 30px;
 }
 .menu a.level-3 {
   font-weight: normal;
   font-size: 0.9em;
-  padding-left: 10px;
+  padding-left: 40px;
 }
 .menu a.active {
   font-weight: bold !important;
@@ -720,7 +765,7 @@ a.big.button:hover:visited {
 .menu a.active:before {
   content: "";
   position: absolute;
-  left: -30px;
+  left: 0px;
   top: 50%;
   margin-top: -1px;
   height: 2px;
@@ -735,7 +780,7 @@ a.big.button:hover:visited {
   height: 4px;
   width: 4px;
   position: absolute;
-  left: -25px;
+  left: 6px;
   top: 50%;
   margin-top: -4px;
 }
