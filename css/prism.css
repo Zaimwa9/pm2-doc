@@ -5,9 +5,9 @@
  * @author Lea Verou
  */
 
-code[class*="lang-"],
-pre[class*="lang-"] {
-	color: #96A4AC;
+code[class*="lang"],
+pre[class*="lang"] {
+	color: #A7B3B8;
 	font-family: Consolas, Monaco, 'Andale Mono', monospace;
 	direction: ltr;
 	text-align: left;
@@ -64,69 +64,86 @@ pre[class*="lang-"] {
 }
 
 .comment,
-.prolog,
+.template_comment,
+.diff .header,
 .doctype,
-.cdata {
-	color: slategray;
-}
+.pi,
+.lisp .string,
+.javadoc {
+    color: #586e75; }
 
-.punctuation {
-	color: #999;
-}
+.keyword,
+.winutils,
+.method,
+.addition,
+.css .tag,
+.request,
+.status,
+.nginx .title {
+    color: #BDCC57; }
 
-.namespace {
-	opacity: .7;
-}
 
-.property,
-.tag,
-.boolean,
 .number,
-.constant,
-.symbol,
-.deleted {
-	color: #905;
-}
-
-.selector,
-.attr-name,
+.command,
 .string,
-.char,
-.builtin,
-.inserted {
-	color: #690;
-}
+.tag .value,
+.rules .value,
+.phpdoc,
+.tex .formula,
+.regexp,
+.hexcolor,
+.link_url {
+    color: #64C0B9; }
 
-.operator,
-.entity,
-.url,
-.lang-css .string,
-.style .string {
-	color: #a67f59;
-	background: hsla(0, 0%, 100%, .5);
-}
 
-.atrule,
-.attr-value,
-.keyword {
-	color: #07a;
-}
+.title,
+.localvars,
+.chunk,
+.decorator,
+.built_in,
+.identifier,
+.vhdl .literal,
+.id,
+.css .function {
+    color: #268bd2; }
 
-.function {
-	color: #DD4A68;
-}
 
-.regex,
-.important,
-.variable {
-	color: #e90;
-}
+.attribute,
+.variable,
+.lisp .body,
+.smalltalk .number,
+.constant,
+.class .title,
+.parent,
+.haskell .type,
+.link_reference {
+    color: #DFC267; }
 
+
+.preprocessor,
+.preprocessor .keyword,
+.pragma,
+.shebang,
+.symbol,
+.symbol .string,
+.diff .change,
+.special,
+.attr_selector,
+.subst,
+.cdata,
+.clojure .title,
+.css .pseudo,
+.header {
+    color: #D8744B; }
+
+.deletion,
 .important {
-	font-weight: bold;
-}
+    color: #dc322f; }
 
-.entity {
-	cursor: help;
-}
 
+.link_label {
+    color: #6c71c4; }
+
+
+.tex .formula {
+    background: #073642; }

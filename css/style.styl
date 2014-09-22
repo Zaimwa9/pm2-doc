@@ -258,14 +258,18 @@ a
       padding-top: 10px
 
   h1
-    border-bottom 1px solid #E9E9E9
     border-top 1px solid #E9E9E9
-    background #FCFCFC
-    font-size 19px
+    font-size 34px
     color #098BCC
     font-weight 200
     margin-top 0px
     top 26px
+
+  h2
+    border-top 1px solid #E9E9E9
+    border-bottom 1px solid #E9E9E9
+    background: #FCFCFC
+    color #098BCC
 
   h3
     font-size: 1.2em
@@ -276,13 +280,7 @@ a
     padding-bottom 10px
 
 
-    @media (max-width: 768px) /* Mobile and tablet */
-      padding-top: $minipad * 2
-      &:before
-        background: $line
-        left: $pad * -1
-        top: $minipad * -1
-        width: 120%
+
 
   // Small headings
   h4, h5, .small-heading
@@ -313,10 +311,8 @@ a
     &:before
       display: none
 
-@media (max-width: 768px) /* Tablet */
-  .content
-    h4, h5, .small-heading, body:not(.big-h3) & h3
-      padding-top: $vmargin * 2
+
+
 
 @media (max-width: 480px) /* Mobile */
   .content
@@ -517,19 +513,23 @@ body.no-literate .content pre > code
     color: $grey
     display: block
     height 58px
-    transition: all .4s ease
+    -webkit-transition: all 500ms
+    -moz-transition: all 500ms
+    -ms-transition: all 500ms
+    -o-transition: all 500ms
+    transition: all 500ms
+
 
     &:hover
       color: #F3F3F3
 
 
   @media (min-width: 480px) /* Tablet & Desktop */
-    h1
-      float: left
+
 
     ul, li
       display: block
-      float: left
+
 
     ul
       margin-left: -15px
@@ -545,10 +545,21 @@ body.no-literate .content pre > code
     li a
       padding: 0 15px
 
-@media (max-width: 480px) /* Mobile */
+@media (max-width: 568px) /* Mobile */
   // Hide extra stuff on mobile
-  .right
-    display: none
+  .header
+    height auto
+    h1
+      padding 0
+      text-align center
+    li
+      text-align: center
+      list-style none
+    .left
+      float none
+      ul
+        width 185px
+        margin 0 auto
 
 // ----------------------------------------------------------------------------
 // Sidebar
@@ -604,7 +615,7 @@ a.big.button
   .menubar
     display: none
 
-@media (min-width: 768px) /* Desktop */
+@media (min-width: 769px) /* Desktop */
   .content-root
     padding-left: $sidebar-width
 
@@ -631,7 +642,10 @@ a.big.button
   ul.level-1
     box-sizing border-box
 
-
+  ul.level-2
+    border-bottom  1px solid #E0E0E0
+    padding-top 15px
+    padding-bottom 15px
   a
     box-sizing: border-box
     position: relative
@@ -641,10 +655,12 @@ a.big.button
     padding-bottom: 1px
     margin-right: ($sidepad * -1)
     font-size 13px
+    font-family Montserat
     &, &:visited
       color #4D4D4D
     &:hover
       color #4D4D4D
+
 
       &:before
         content ""
@@ -670,28 +686,39 @@ a.big.button
 
   a.level-1
     color: #4D4D4D;
-    border-top 1px solid #E0E0E0
-    padding: 8px 12px 8px 20px;
+    padding: 8px 12px 8px 15px;
     font-size: 14px;
     font-weight: 400;
     display: block;
     text-decoration: none;
+    border-bottom  1px solid #E0E0E0
+    &:last-of-type
+      border-top none
+
 
     &, &:visited
       color: $grey
     &:hover
       background: rgba(76, 95, 102, 0.1)
+
     &.active-section
       background: rgba(76,95,102,0.1)
       font-weight bold
+      border-bottom  1px solid #E0E0E0
+
+    &:after
+
+    &:before
+      display none
 
   a.level-2
     font-weight: normal
-    padding-left 30px
+    padding-left 25px
+
   a.level-3
     font-weight: normal
-    font-size: 0.9em
-    padding-left 40px
+    font-size: 13px
+    padding-left 35px
 
   a.active
     &, &:visited, &:hover

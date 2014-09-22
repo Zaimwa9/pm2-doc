@@ -149,7 +149,7 @@
         Transformer.mangle(html);
         var menu = Transformer.getMenu(html);
 
-        return { title: title, content: html, menu: menu };
+        return { title: title, content: html , menu: menu };
     };
 
     Parser.setMarkedOptions = function(highlight) {
@@ -438,7 +438,7 @@
             if (id) {
                 var el = document.getElementById(id);
                 if (el) el.scrollIntoView(true);
-            };
+            }
             $(doc.root).trigger('flatdoc:ready');
         });
     };
