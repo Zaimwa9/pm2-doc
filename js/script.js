@@ -7,15 +7,60 @@
      */
 
     $document.on('flatdoc:ready', function() {
-        $("h2, h3").scrollagent(function(cid, pid, currentElement, previousElement) {
-            if (pid) {
-                $("[href='#"+pid+"']").removeClass('active');
+
+        $('ul.level-2, ul.level-3').addClass('nav');
+
+        $('body').scrollspy({
+            target: '#root-list.level-1',
+            offset: 20
+        });
+
+        $(window).resize(function() {
+            $('body').scrollspy('refresh');
+        });
+        $('.level-2').hide();
+        $('.level-3').hide();
+        
+        $(window).on('scroll', function () {
+            $('.level-2').hide();
+            $('.level-3').hide();
+            var active = $('ul.level-2, ul.level-3').has('a.active');
+            if (!active.length) {
+                var first = $('li.level-1').eq(0);
+                first.find('a.level-1').addClass('active-section');
+                first.find('.level-2, .level-3').show();
             }
-            if (cid) {
-                $("[href='#"+cid+"']").addClass('active');
-            }
+            active.show();
+            active.find('.level-2, .level-3').show();
+
+            $('.active-section').removeClass('active-section');
+            var activeSection = $('li.level-1').has('a.active');
+            activeSection.children('a').addClass('active-section');
+            var noop;
         });
         $('a.level-1').eq(0).addClass('active-section');
+
+        /*
+         * COPY CODE FUNCTIONALITY
+         */
+
+        $("pre").each(function(){
+            $(this).prepend("<a class='copy' title='Copy to clipboard' data-placement='left' href='#'></a>");
+        });
+
+        $('a.copy')
+            .tooltip()
+            .on("click", function (){
+
+                $('a.copy').removeClass("highlight");
+
+                var copyMe = $(this).next().next('code').text();
+                window.prompt("Copy to clipboard: Ctrl+C, Enter", copyMe);
+
+                $(this).addClass("highlight");
+
+                return false;
+            });
     });
 
     /*
@@ -91,94 +136,88 @@
 //        }
 //      });
 
-(function($) {
-
-    $.fn.scrollagent = function(options, callback) {
-        // Account for $.scrollspy(function)
-        if (typeof callback === 'undefined') {
-            callback = options;
-            options = {};
-        }
-
-        var $sections = $(this);
-        var $parent = options.parent || $(window);
-
-        // Find the top offsets of each section
-        var offsets = [];
-        $sections.each(function(i) {
-            var offset = $(this).attr('data-anchor-offset') ?
-                parseInt($(this).attr('data-anchor-offset'), 10) :
-                (options.offset || 0);
-
-            offsets.push({
-                top: $(this).offset().top + offset,
-                id: $(this).attr('id'),
-                index: i,
-                el: this
-            });
-        });
-
-        // State
-        var current = null;
-        var height = null;
-        var range = null;
-
-        // Save the height. Do this only whenever the window is resized so we don't
-        // recalculate often.
-        $(window).on('resize', function() {
-            height = $parent.height();
-            range = $(document).height();
-        });
-
-        // Find the current active section every scroll tick.
-        $parent.on('scroll', function() {
-            var y = $parent.scrollTop();
-            y += height * (0.3 + 0.7 * Math.pow(y/range, 2));
-
-            var latest = null;
-
-            for (var i in offsets) {
-                if (offsets.hasOwnProperty(i)) {
-                    var offset = offsets[i];
-                    if (offset.top < y) latest = offset;
-                }
-            }
-
-            if (latest && (!current || (latest.index !== current.index))) {
-                callback.call($sections,
-                    latest ? latest.id : null,
-                    current ? current.id : null,
-                    latest ? latest.el : null,
-                    current ? current.el : null);
-                current = latest;
-            }
-
-
-            $('.level-2').hide();
-            $('.level-3').hide();
-            var active = $('ul.level-2, ul.level-3').has('a.active');
-            if (!active.length) {
-              var first = $('li.level-1').eq(0);
-              first.find('a.level-1').addClass('active-section');
-              first.find('.level-2, .level-3').show();
-            }
-            active.show();
-            active.find('.level-2, .level-3').show();
-
-            $('.active-section').removeClass('active-section');
-            var activeSection = $('li.level-1').has('a.active');
-            activeSection.children('a').addClass('active-section');
-            var noop;
-
-        });
-
-        $(window).trigger('resize');
-        $parent.trigger('scroll');
-
-        return this;
-    };
-
-})(jQuery);
+//(function($) {
+//
+//    $.fn.scrollagent = function() {
+//        // Account for $.scrollspy(function)
+//        if (typeof callback === 'undefined') {
+//            callback = options;
+//            options = {};
+//        }
+//
+//        var $sections = $(this);
+//        var $parent = options.parent || $(window);
+//
+//        // Find the top offsets of each section
+//        var offsets = [];
+//        $sections.each(function(i) {
+//            var offset = $(this).attr('data-anchor-offset') ?
+//                parseInt($(this).attr('data-anchor-offset'), 10) :
+//                (options.offset || 0);
+//
+//            offsets.push({
+//                top: $(this).offset().top + offset,
+//                id: $(this).attr('id'),
+//                index: i,
+//                el: this
+//            });
+//        });
+//
+//
+//        $(window).on('resize', function() {
+//            height = $parent.height();
+//            range = $(document).height();
+//        });
+//
+//        // Find the current active section every scroll tick.
+//        $parent.on('scroll', function() {
+//            var y = $parent.scrollTop();
+//            y += height * (0.3 + 0.7 * Math.pow(y/range, 2));
+//
+//            var latest = null;
+//
+//            for (var i in offsets) {
+//                if (offsets.hasOwnProperty(i)) {
+//                    var offset = offsets[i];
+//                    if (offset.top < (y-330)) latest = offset;
+//                }
+//            }
+//
+//            if (latest && (!current || (latest.index !== current.index))) {
+//                callback.call($sections,
+//                    latest ? latest.id : null,
+//                    current ? current.id : null,
+//                    latest ? latest.el : null,
+//                    current ? current.el : null);
+//                current = latest;
+//            }
+//
+//
+//            $('.level-2').hide();
+//            $('.level-3').hide();
+//            var active = $('ul.level-2, ul.level-3').has('a.active');
+//            if (!active.length) {
+//              var first = $('li.level-1').eq(0);
+//              first.find('a.level-1').addClass('active-section');
+//              first.find('.level-2, .level-3').show();
+//            }
+//            active.show();
+//            active.find('.level-2, .level-3').show();
+//
+//            $('.active-section').removeClass('active-section');
+//            var activeSection = $('li.level-1').has('a.active');
+//            activeSection.children('a').addClass('active-section');
+//            var noop;
+//
+//        });
+//
+//        $(window).trigger('resize');
+//        $parent.trigger('scroll');
+//
+//        return this;
+//    };
+//
+//})(jQuery);
 /*! Anchorjump (c) 2012, Rico Sta. Cruz. MIT License.
  *   http://github.com/rstacruz/jquery-stuff/tree/master/anchorjump */
 
