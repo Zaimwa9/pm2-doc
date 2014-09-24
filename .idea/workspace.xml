@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6906e4f2-a244-48d3-b152-8756a031e6f1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.styl" afterPath="$PROJECT_DIR$/css/style.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="doc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -59,7 +55,16 @@
       <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.35260117" vertical-offset="69" max-vertical-offset="5202">
+            <state line="20" column="7" selection-start="423" selection-end="423" vertical-scroll-proportion="0.39306358" vertical-offset="0" max-vertical-offset="5185">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Downloads/resize-header-on-scroll/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="71" selection-start="162" selection-end="162" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="2074">
               <folding />
             </state>
           </provider>
@@ -463,6 +468,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Downloads/resize-header-on-scroll/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="71" selection-start="162" selection-end="162" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="2074">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="21" column="17" selection-start="767" selection-end="767" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1088">
@@ -472,7 +484,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="8" selection-start="484" selection-end="484" vertical-scroll-proportion="0.35260117" vertical-offset="69" max-vertical-offset="5202">
+        <state line="20" column="7" selection-start="423" selection-end="423" vertical-scroll-proportion="0.39306358" vertical-offset="0" max-vertical-offset="5185">
           <folding />
         </state>
       </provider>

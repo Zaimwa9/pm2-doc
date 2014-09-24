@@ -18,9 +18,8 @@
         $(window).resize(function() {
             $('body').scrollspy('refresh');
         });
-        $('.level-2').hide();
-        $('.level-3').hide();
-        
+       
+
         $(window).on('scroll', function () {
             $('.level-2').hide();
             $('.level-3').hide();
