@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6906e4f2-a244-48d3-b152-8756a031e6f1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.styl" afterPath="$PROJECT_DIR$/css/style.styl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="doc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,7 +32,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="17" selection-start="767" selection-end="767" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1088">
+            <state line="28" column="51" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1071">
               <folding />
             </state>
           </provider>
@@ -46,7 +50,7 @@
       <file leaf-file-name="flatdoc.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/flatdoc.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="0" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="8789">
+            <state line="32" column="7" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8789">
               <folding />
             </state>
           </provider>
@@ -55,25 +59,16 @@
       <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="7" selection-start="423" selection-end="423" vertical-scroll-proportion="0.39306358" vertical-offset="0" max-vertical-offset="5185">
+            <state line="62" column="9" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.84277457" vertical-offset="325" max-vertical-offset="5219">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/resize-header-on-scroll/index.html">
+      <file leaf-file-name="script2.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/script2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="71" selection-start="162" selection-end="162" vertical-scroll-proportion="-4.576923" vertical-offset="0" max-vertical-offset="2074">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/doc/doc/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="4" selection-start="622" selection-end="661" vertical-scroll-proportion="-11.769231" vertical-offset="0" max-vertical-offset="1071">
+            <state line="61" column="15" selection-start="1204" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="5185">
               <folding />
             </state>
           </provider>
@@ -82,7 +77,7 @@
       <file leaf-file-name="style.styl" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="651" column="15" selection-start="12057" selection-end="12057" vertical-scroll-proportion="0.0" vertical-offset="10728" max-vertical-offset="14739">
+            <state line="434" column="27" selection-start="7949" selection-end="7949" vertical-scroll-proportion="-7.8" vertical-offset="7183" max-vertical-offset="14756">
               <folding />
             </state>
           </provider>
@@ -109,9 +104,11 @@
         <option value="$PROJECT_DIR$/as.html" />
         <option value="$PROJECT_DIR$/css/prism.css" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/css/style.styl" />
         <option value="$USER_HOME$/Downloads/doc/doc/js/script.js" />
         <option value="$PROJECT_DIR$/js/flatdoc.js" />
+        <option value="$PROJECT_DIR$/../docV3/doc/js/script.js" />
+        <option value="$PROJECT_DIR$/../docV3/doc/index.html" />
+        <option value="$PROJECT_DIR$/css/style.styl" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/script.js" />
       </list>
@@ -388,75 +385,61 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="147" column="1" selection-start="1548" selection-end="1550" vertical-scroll-proportion="-11.2" vertical-offset="2219" max-vertical-offset="15487">
           <folding>
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1411481749850" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1411589607550" expanded="true" signature="-1:-1" placeholder="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.styl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="651" column="15" selection-start="12057" selection-end="12057" vertical-scroll-proportion="0.0" vertical-offset="10728" max-vertical-offset="14739">
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Downloads/doc/doc/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="0" selection-end="8060" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4794">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/flatdoc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="0" selection-start="1935" selection-end="1935" vertical-scroll-proportion="0.0" vertical-offset="646" max-vertical-offset="8789">
           <folding />
         </state>
       </provider>
@@ -475,16 +458,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/flatdoc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="7" selection-start="621" selection-end="621" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="8789">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../docV3/doc/js/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="0" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="5219">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="17" selection-start="767" selection-end="767" vertical-scroll-proportion="-13.730769" vertical-offset="0" max-vertical-offset="1088">
+        <state line="28" column="51" selection-start="1010" selection-end="1010" vertical-scroll-proportion="-18.307692" vertical-offset="0" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../docV3/doc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="21" selection-start="949" selection-end="963" vertical-scroll-proportion="0.33134684" vertical-offset="164" max-vertical-offset="1071">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.styl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="434" column="27" selection-start="7949" selection-end="7949" vertical-scroll-proportion="-7.8" vertical-offset="7183" max-vertical-offset="14756">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/script2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="15" selection-start="1204" selection-end="1783" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="5185">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="7" selection-start="423" selection-end="423" vertical-scroll-proportion="0.39306358" vertical-offset="0" max-vertical-offset="5185">
+        <state line="62" column="9" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.84277457" vertical-offset="325" max-vertical-offset="5219">
           <folding />
         </state>
       </provider>

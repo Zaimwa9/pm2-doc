@@ -8,60 +8,58 @@
 
     $document.on('flatdoc:ready', function() {
 
-      $('ul.level-2, ul.level-3').addClass('nav');
+        $('ul.level-2, ul.level-3').addClass('nav');
 
-      $('body').scrollspy({
-        target: '#root-list.level-1',
-        offset: 20
-      });
+        $('body').scrollspy({
+            target: '#root-list.level-1',
+            offset: 20
+        });
 
-      $(window).resize(function() {
-        $('body').scrollspy('refresh');
-      });
+        $(window).resize(function() {
+            $('body').scrollspy('refresh');
+        });
 
-      $(window).on('scroll', function () {
-        $('.level-2, .level-3').hide();
-        var active = $('ul.level-2, ul.level-3').has('a.active');
-        if (!active.length) {
-          var first = $('li.level-1').eq(0);
-          first.find('a.level-1').addClass('active-section');
-          first.find('.level-2, .level-3').show();
-        }
-        active.show();
-        active.find('.level-2, .level-3').show();
 
-        $('.active-section').removeClass('active-section');
-        var activeSection = $('li.level-1').has('a.active');
-        activeSection.children('a').addClass('active-section');
-        var noop;
-      });
-      $('.level-2, .level-3').hide();
-      var first = $('li.level-1').eq(0);
-      first.find('a.level-1').addClass('active-section');
-      first.find('.level-2, .level-3').show();
+        $(window).on('scroll', function () {
+            $('.level-2').hide();
+            $('.level-3').hide();
+            var active = $('ul.level-2, ul.level-3').has('a.active');
+            if (!active.length) {
+                var first = $('li.level-1').eq(0);
+                first.find('a.level-1').addClass('active-section');
+                first.find('.level-2, .level-3').show();
+            }
+            active.show();
+            active.find('.level-2, .level-3').show();
 
-      /*
-       * COPY CODE FUNCTIONALITY
-       */
+            $('.active-section').removeClass('active-section');
+            var activeSection = $('li.level-1').has('a.active');
+            activeSection.children('a').addClass('active-section');
+            var noop;
+        });
+        $('a.level-1').eq(0).addClass('active-section');
 
-      $("pre").each(function(){
-          $(this).prepend("<a class='copy' title='Copy to clipboard' data-placement='left' href='#'></a>");
-      });
+        /*
+         * COPY CODE FUNCTIONALITY
+         */
 
-      $('a.copy')
-          .tooltip()
-          .on("click", function (){
+        $("pre").each(function(){
+            $(this).prepend("<a class='copy' title='Copy to clipboard' data-placement='left' href='#'></a>");
+        });
 
-              $('a.copy').removeClass("highlight");
+        $('a.copy')
+            .tooltip()
+            .on("click", function (){
 
-              var copyMe = $(this).next().next('code').text();
-              window.prompt("Copy to clipboard: Ctrl+C, Enter", copyMe);
+                $('a.copy').removeClass("highlight");
 
-              $(this).addClass("highlight");
+                var copyMe = $(this).next().next('code').text();
+                window.prompt("Copy to clipboard: Ctrl+C, Enter", copyMe);
 
-              return false;
-      });
+                $(this).addClass("highlight");
 
+                return false;
+            });
     });
 
     /*

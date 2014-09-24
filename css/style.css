@@ -189,83 +189,6 @@ a ul {
 .content table tr td :last-child {
   margin-bottom: 0;
 }
-.content a.copy {
-  position: absolute;
-  right: 20px;
-  top: -20px;
-  color: #c0c0c0;
-  font-size: 12px;
-  text-decoration: none;
-  border-radius: 3px;
-  line-height: 1;
-  background-image: url("https://developers.digitalocean.com/assets/images/sprites/clip-sprite.png");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  width: 14px;
-  height: 19px;
-  display: block !important;
-}
-.content a.copy.highlight {
-  background-position: -18px 0;
-}
-.content a.copy.highlight:before {
-  position: absolute;
-  content: 'Code copied';
-  top: 5px;
-  right: 25px;
-  color: #61bbb9;
-  font-style: italic;
-  font-size: 13px;
-  width: 100px;
-  text-align: right;
-  opacity: 1;
-}
-.tooltip {
-  position: absolute;
-  z-index: 1030;
-  display: block;
-  font-size: 13px;
-  line-height: 1.3;
-  visibility: visible;
-  opacity: 0;
-}
-.tooltip.in {
-  opacity: 1;
-}
-.tooltip.left {
-  padding: 0 5px;
-  margin-left: -8px;
-}
-.tooltip-inner {
-  max-width: 400px;
-  padding: 7px 13px;
-  color: #d5dde4;
-  text-align: center;
-  text-decoration: none;
-  background-color: #151c21;
-  border-radius: 4px 4px 0 4px;
-}
-.tooltip-arrow {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-color: transparent;
-  border-style: solid;
-}
-.tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #151c21;
-}
-.tooltip.left .tooltip-arrow {
-  top: 50%;
-  right: 0;
-  margin-top: -5px;
-  border-width: 5px 0 5px 5px;
-  border-left-color: #151c21;
-}
 /* ----------------------------------------------------------------------------
  * Content
  */
@@ -338,9 +261,6 @@ a ul {
 .content .big-heading {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-.content pre {
-  position: relative;
 }
 .content h4,
 .content h5,
@@ -674,7 +594,7 @@ body.no-literate .content pre > code:hover::-webkit-scrollbar-thumb {
 .menubar {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image: url("images/noise.jpg");
+  background-image: url("https://developers.digitalocean.com/assets/images/noise.jpg");
 }
 .menubar .section {
   width: 200px;
@@ -902,4 +822,81 @@ a.big.button:hover:visited {
 .title-area > div {
   position: relative;
   z-index: 1;
+}
+.content a.copy {
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  color: #c0c0c0;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 3px;
+  line-height: 1;
+  background-image: url("https://developers.digitalocean.com/assets/images/sprites/clip-sprite.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 19px;
+  display: block !important;
+}
+.content a.copy.highlight {
+  background-position: -18px 0;
+}
+.content a.copy.highlight:before {
+  position: absolute;
+  content: 'Code copied';
+  top: 5px;
+  right: 25px;
+  color: #61bbb9;
+  font-style: italic;
+  font-size: 13px;
+  width: 100px;
+  text-align: right;
+  opacity: 1;
+}
+.tooltip {
+  position: absolute;
+  z-index: 1030;
+  display: block;
+  font-size: 13px;
+  line-height: 1.3;
+  visibility: visible;
+  opacity: 0;
+}
+.tooltip.in {
+  opacity: 1;
+}
+.tooltip.left {
+  padding: 0 5px;
+  margin-left: -8px;
+}
+.tooltip-inner {
+  max-width: 400px;
+  padding: 7px 13px;
+  color: #d5dde4;
+  text-align: center;
+  text-decoration: none;
+  background-color: #151c21;
+  border-radius: 4px 4px 0 4px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #151c21;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #151c21;
 }
