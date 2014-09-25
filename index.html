@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-<head>
+  <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width">
@@ -9,49 +9,51 @@
 
     <!-- Flatdoc -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src='http://rstacruz.github.io/flatdoc/v/0.8.6/legacy.js'></script>
-    <script src='js/flatdoc.js'></script>
-    <script src='js/prism.js' ></script>
+    <script src="js/legacy.js"></script>
+    <script src="js/flatdoc.js"></script>
+    <script src="js/prism.js"></script>
     <script src="js/tooltips.min.js"></script>
     <!-- Flatdoc theme -->
     <link rel="stylesheet" href="css/prism.css"/>
     <link  href='css/style.css' rel='stylesheet'>
 
-    <script src='js/scrollspy.js'></script>
-    <script src='js/script.js'></script>
+    <script src="js/scrollspy.js"></script>
+    <script src="js/script.js"></script>
     <!-- Meta -->
-    <meta content="Your Project" property="og:title">
-    <meta content="Your Project description goes here." name="description">
+    <meta content="PM2 API Documentation" property="og:title">
+    <meta content="PM2 is a process manager for Node.js" name="description">
 
     <!-- Initializer -->
     <script>
-        Flatdoc.run({
-            fetcher: Flatdoc.github('keymetrics/pm2')
-        });
+      Flatdoc.run({
+      fetcher: Flatdoc.github('unitech/pm2', 'ADVANCED_README.md')
+      });
 
     </script>
 
-</head>
-<body role='flatdoc' class="big-h3">
+  </head>
+  <body role='flatdoc' class="big-h3">
 
-<div class='header'>
-    <div class='left'>
-        <h1>Your Project</h1>
-        <ul>
-            <li><a href='https://github.com/USER/REPO'>API V1</a></li>
-            <li><a href='https://github.com/USER/REPO/issues'>API V1</a></li>
-            <li><a href='https://github.com/USER/REPO/issues'>OAUTH OVERVIEW</a></li>
-        </ul>
+    <!--  -->
+    <div class='header'>
+      <div class='left'>
+        <h1><img src="https://raw.githubusercontent.com/unitech/pm2/master/pres/pm2.20d3ef.png" width="200"/></h1>
+        <!-- <ul> -->
+        <!--     <li><a href='https://github.com/USER/REPO'>API V1</a></li> -->
+        <!--     <li><a href='https://github.com/USER/REPO/issues'>API V1</a></li> -->
+        <!--     <li><a href='https://github.com/USER/REPO/issues'>OAUTH OVERVIEW</a></li> -->
+        <!-- </ul> -->
+      </div>
+
     </div>
 
-</div>
-
-<div class='content-root'>
-    <div class='menubar'>
+    <div class='content-root'>
+      <div class='menubar'>
         <div class='menu section' role='flatdoc-menu'></div>
+      </div>
+      <div role='flatdoc-content' class='content'>
+      </div>
     </div>
-    <div role='flatdoc-content' class='content'></div>
-</div>
 
-</body>
+  </body>
 </html>

@@ -427,12 +427,16 @@
     Runner.prototype.run = function() {
         var doc = this;
         $(doc.root).trigger('flatdoc:loading');
-        doc.fetcher(function(err, markdown) {
-            if (err) {
-                console.error('[Flatdoc] fetching Markdown data failed.', err);
-                return;
-            }
-            var data = Flatdoc.parser.parse(markdown, doc.highlight);
+      doc.fetcher(function(err, markdown) {
+          if (err) {
+            console.error('[Flatdoc] fetching Markdown data failed.', err);
+            return;
+          }
+
+          var data = Flatdoc.parser.parse(markdown, doc.highlight);
+
+
+          //data.content += $('.content')[0];
             doc.applyData(data, doc);
             var id = location.hash.substr(1);
             if (id) {
@@ -450,9 +454,9 @@
     Runner.prototype.applyData = function(data) {
         var elements = this;
 
-        elements.el('title').html(data.title);
-        elements.el('content').html(data.content.find('>*'));
-        elements.el('menu').html(MenuView(data.menu));
+      elements.el('title').html(data.title);
+      elements.el('content').html(data.content.find('>*'));
+      elements.el('menu').html(MenuView(data.menu));
     };
 
     /**
