@@ -9,7 +9,7 @@ html, body {
 }
 
 html {
-  overflow-x: hidden;
+
 }
 
 body, td, textarea, input {
@@ -164,7 +164,8 @@ a {
  */
 
 .content-root {
-  min-height: 100%;
+  height: 100%;
+  width:100%;
   position: relative;
   img {
     max-width: 100%;
@@ -185,7 +186,6 @@ a {
   padding-bottom: 240px;
   padding-left: 40px;
   padding-right: 40px;
-  max-width: 700px;
   blockquote {
     color: #5b6c75;
     font-size: 15px;
@@ -371,10 +371,23 @@ body.no-literate .content pre > code {
   color: #919191;
 }
 
+.inner-content {
+  height : 100%;
+  .right-cache {
+    width : 50%;
+    background-color: #25323a;
+    position : fixed;
+    z-index : -1;
+    height : 100%;
+    top : 0px;
+    right : 0px
+  }
+}
+
+
 @media (min-width: 1180px) {
   body:not(.no-literate) .content-root {
-    background-color: #25323a;
-    box-shadow: inset 780px 0 white, inset 781px 0 #dfe2e7, inset 790px 0 5px -10px rgba(0, 0, 0, 0.1);
+    //box-shadow: inset 780px 0 white, inset 781px 0 #dfe2e7, inset 790px 0 5px -10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -383,18 +396,16 @@ body.no-literate .content pre > code {
     &:not(.no-literate) .content {
       padding-left: 0;
       padding-right: 0;
-      width: auto;
       max-width: none;
       > {
         p, ul, ol, h1, h2, h3, h4, h5, h6, pre, blockquote {
-          width: 580px;
+          width: 50%;
           box-sizing: border-box;
           padding-right: 40px;
           padding-left: 40px;
         }
         h1, h2, h3 {
           clear: both;
-          width:50%;
         }
         pre {
           position: relative;
@@ -540,6 +551,9 @@ body.no-literate .content pre > code {
 }
 
 @media (max-width: 568px) {
+  .right-cache {
+    display : none;
+  }
   .header {
     height: auto;
     h1 {

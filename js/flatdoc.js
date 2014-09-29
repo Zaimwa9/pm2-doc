@@ -4,6 +4,15 @@
  * @license MIT
  */
 
+function size_elements() {
+  $('.inner-content').width($(window).width() - $('.menubar').width());
+  $('.right-cache').width($('.inner-content').width() / 2);
+}
+$().ready(function() {
+ size_elements();
+  $(window).resize(size_elements);
+});
+
 (function($) {
     var exports = this;
 

@@ -2,9 +2,6 @@ html, body {
   height: 100%;
   margin: 0; }
 
-html {
-  overflow-x: hidden; }
-
 body, td, textarea, input {
   font-family: Helvetica Neue, Open Sans, sans-serif;
   line-height: 1.6;
@@ -122,7 +119,8 @@ a {
  * Content
  */
 .content-root {
-  min-height: 100%;
+  height: 100%;
+  width: 100%;
   position: relative; }
   .content-root img {
     max-width: 100%; }
@@ -139,8 +137,7 @@ a {
 .content {
   padding-bottom: 240px;
   padding-left: 40px;
-  padding-right: 40px;
-  max-width: 700px; }
+  padding-right: 40px; }
   .content blockquote {
     color: #5b6c75;
     font-size: 15px; }
@@ -288,24 +285,29 @@ body.no-literate .content pre > code {
 .content .button + em {
   color: #919191; }
 
-@media (min-width: 1180px) {
-  body:not(.no-literate) .content-root {
+.inner-content {
+  height: 100%; }
+  .inner-content .right-cache {
+    width: 50%;
     background-color: #25323a;
-    box-shadow: inset 780px 0 white, inset 781px 0 #dfe2e7, inset 790px 0 5px -10px rgba(0, 0, 0, 0.1); } }
+    position: fixed;
+    z-index: -1;
+    height: 100%;
+    top: 0px;
+    right: 0px; }
+
 @media (min-width: 1180px) {
   body:not(.no-literate) .content {
     padding-left: 0;
     padding-right: 0;
-    width: auto;
     max-width: none; }
     body:not(.no-literate) .content > p, body:not(.no-literate) .content > ul, body:not(.no-literate) .content > ol, body:not(.no-literate) .content > h1, body:not(.no-literate) .content > h2, body:not(.no-literate) .content > h3, body:not(.no-literate) .content > h4, body:not(.no-literate) .content > h5, body:not(.no-literate) .content > h6, body:not(.no-literate) .content > pre, body:not(.no-literate) .content > blockquote {
-      width: 580px;
+      width: 50%;
       box-sizing: border-box;
       padding-right: 40px;
       padding-left: 40px; }
     body:not(.no-literate) .content > h1, body:not(.no-literate) .content > h2, body:not(.no-literate) .content > h3 {
-      clear: both;
-      width: 50%; }
+      clear: both; }
     body:not(.no-literate) .content > pre {
       position: relative;
       width: 50%;
@@ -412,6 +414,9 @@ body.no-literate .content pre > code {
     .header li a {
       padding: 0 15px; } }
 @media (max-width: 568px) {
+  .right-cache {
+    display: none; }
+
   .header {
     height: auto; }
     .header h1 {
