@@ -414,9 +414,6 @@ body.no-literate .content pre > code {
     .header li a {
       padding: 0 15px; } }
 @media (max-width: 568px) {
-  .right-cache {
-    display: none; }
-
   .header {
     height: auto; }
     .header h1 {
@@ -475,6 +472,9 @@ a.big.button {
     padding: 20px;
     border-bottom: solid 1px #dfe2e7; } }
 @media (max-width: 768px) {
+  .right-cache {
+    display: none; }
+
   .menubar {
     display: none; } }
 @media (min-width: 769px) {

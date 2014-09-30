@@ -551,9 +551,6 @@ body.no-literate .content pre > code {
 }
 
 @media (max-width: 568px) {
-  .right-cache {
-    display : none;
-  }
   .header {
     height: auto;
     h1 {
@@ -633,6 +630,9 @@ a.big.button {
 }
 
 @media (max-width: 768px) {
+  .right-cache {
+    display : none;
+  }
   .menubar {
     display: none;
   }

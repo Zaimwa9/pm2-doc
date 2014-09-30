@@ -5,8 +5,16 @@
  */
 
 function size_elements() {
-  $('.inner-content').width($(window).width() - $('.menubar').width());
-  $('.right-cache').width($('.inner-content').width() / 2);
+  console.log($(window).width());
+  if ($(window).width() > 1000) {
+    $('.inner-content').width($(window).width() - $('.menubar').width());
+    $('.right-cache').width($('.inner-content').width() / 2);
+    $('.right-cache').show();
+  }
+  else {
+    $('.right-cache').hide();
+    $('.inner-content').width($(window).width());
+  }
 }
 $().ready(function() {
  size_elements();
