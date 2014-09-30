@@ -234,10 +234,13 @@ body {
     padding-bottom: 10px;
     font-size: 0.9em;
   }
-  &.big-h3 .content h3 {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  &.big-h3 .content h3, h2 {
     background: #fff;
+    margin: 10px 0 0;
+  }
+
+  ul {
+    margin-top: 0;
   }
 }
 
@@ -451,7 +454,7 @@ body.no-literate .content pre > code {
       .content > table {
         margin-left: 40px;
         margin-right: 40px;
-        max-width: 500px;
+        max-width: 435px;
       }
       &:not(.big-h3) .content > h3 {
         margin-left: 40px;
@@ -629,10 +632,7 @@ a.big.button {
 }
 
 @media (max-width: 768px) {
-  .right-cache {
-    display : none;
-  }
-  .menubar {
+  .menubar, a.copy, .right-cache {
     display: none;
   }
 }
@@ -903,4 +903,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px)
 and (orientation : landscape) {
   .right-cache {width:0!important}
+}
+h3#-table-of-contents-more {
+  margin-bottom: 10px;
 }

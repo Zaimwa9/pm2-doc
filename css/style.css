@@ -176,10 +176,11 @@ body:not(.big-h3) .content h3 {
   padding-top: 30px;
   padding-bottom: 10px;
   font-size: 0.9em; }
-body.big-h3 .content h3 {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background: #fff; }
+body.big-h3 .content h3, body h2 {
+  background: #fff;
+  margin: 10px 0 0; }
+body ul {
+  margin-top: 0; }
 
 .content h1:first-child {
   padding-top: 10px;
@@ -342,7 +343,7 @@ body.no-literate .content pre > code {
   body:not(.no-literate) .content > table {
     margin-left: 40px;
     margin-right: 40px;
-    max-width: 500px; }
+    max-width: 435px; }
   body:not(.no-literate):not(.big-h3) .content > h3 {
     margin-left: 40px;
     width: 500px;
@@ -472,10 +473,7 @@ a.big.button {
     padding: 20px;
     border-bottom: solid 1px #dfe2e7; } }
 @media (max-width: 768px) {
-  .right-cache {
-    display: none; }
-
-  .menubar {
+  .menubar, a.copy, .right-cache {
     display: none; } }
 @media (min-width: 769px) {
   .content-root {
@@ -695,3 +693,5 @@ a.big.button {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .right-cache {
     width: 0 !important; } }
+h3#-table-of-contents-more {
+  margin-bottom: 10px; }
