@@ -12,7 +12,7 @@
 
     $('body').scrollspy({
       target: '#root-list.level-1',
-      offset: 20
+      offset: 100
     });
 
     $(window).resize(function() {
